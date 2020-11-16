@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kurs Mata uang</title>
+  <script>
+    function hitung() {
+      let n1 = Number(document.getElementById("uang1").value);
+      let val = document.getElementById("uang2").value;
+
+      if (val === "1") {
+        document.getElementById("uang3").value = n1 * 9915;
+      } else if (val === "2") {
+        document.getElementById("uang3").value = n1 * 13472;
+      } else if (val === "3") {
+        document.getElementById("uang3").value = n1 * 874;
+      } else if (val === "4") {
+        document.getElementById("uang3").value = n1 * 120;
+      } else if (val === "5") {
+        document.getElementById("uang3").value = n1 * 15888;
+      } else if (val === "6") {
+        document.getElementById("uang3").value = n1 * 3592;
+      }
+    }
+  </script>
+</head>
+<body>
+  <fieldset id="kotak">
+    <h1 align="center">Kurs Mata Uang Asing</h1>
+    <table bgcolor="white" border="1" align="center">
+      <th>Masukkan Nilai</th>
+      <th>Valas</th>
+      <th>Nilai Rupiah</th>
+      <tr>
+        <td>
+          <form>
+            <input type="teks" id="uang1" value="0" onchange="hitung()" /><form>
+            </td>
+            <td>
+              <select id="uang2" onchange="hitung()">
+                <option>Pilih Mata Uang</option>
+                <option value="1">Dollar Us</option>
+                <option value="2">Dollar Singapore</option>
+                <option value="3">Ringgit Malaysia</option>
+                <option value="4">Yen Jepang</option>
+                <option value="5">Euro</option>
+                <option value="6">Riyal Arab Saudi</option>
+              </select>
+            </td>
+            <td>
+              <form>
+                <input type="teks" id="uang3" value="0" onchange="hitung()" />
+              </form>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </body>
+  </html>
